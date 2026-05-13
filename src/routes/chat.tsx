@@ -39,11 +39,8 @@ function ChatLayout() {
       if (remaining.length > 0) {
         navigate({ to: "/chat/$threadId", params: { threadId: remaining[0].id }, replace: true });
       } else {
-        const t = { id: "init", title: "" };
-        // create new
         const fresh = createThread();
         navigate({ to: "/chat/$threadId", params: { threadId: fresh.id }, replace: true });
-        void t;
       }
     }
   };
